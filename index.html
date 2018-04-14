@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Honeydew</title>
-  <script src="./bundle.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Honeydew</h1>
+  <div class="wrapper">
+    <div class="container">
+      <h1>Honeydew</h1>
+      <h4>A modern todo list</h4>
+    </div>
+    <div class="container">
+      <div id="todoList">
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <form class="newTask">
+      <label>Add Task:</label>
+      <input type="text" id="taskString" />
+      <button type="submit" id="submitButton">Add!</button>
+    </form>
+  </div>
+  <script src="./bundle.js"></script>
 </body>
 </html>
