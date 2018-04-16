@@ -6,5 +6,5 @@
 }
 
 .strikethrough {
-  font-size: xx-small;
+  text-decoration: line-through;
 }
