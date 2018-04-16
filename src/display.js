@@ -1,8 +1,8 @@
-const showNewListItem = task => {
+const showNewListItem = (task, pos) => {
   const div = document.createElement('div')
   div.innerHTML = `
     <h2>
-      <input type='checkbox' class='taskCheckBox'/>
+      <input type='checkbox' class='taskCheckBox' id=${pos} />
       ${task}
     </h2>
   `
