@@ -1,3 +1,11 @@
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
 .container {
   width: 50%;
   margin: auto;
@@ -7,4 +15,6 @@
 
 .strikethrough {
   text-decoration: line-through;
+  color: gray;
 }
+

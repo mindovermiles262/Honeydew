@@ -1,4 +1,4 @@
-import defaultList from './logic';
+import defaultList from './state';
 import showNewListItem from './display';
 
 const anchor = document.querySelector('#todoList');
@@ -24,6 +24,7 @@ const renderList = (list) => {
     let newTask = showNewListItem(element['task'], element['pos']);
     if (element.completed == true) {
       newTask.classList.add('strikethrough') 
+      newTask.children[0].children[0].checked = true;
     }
     anchor.appendChild(newTask); 
   })
@@ -47,9 +48,11 @@ const toggleComplete = (list, position) => {
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault()
-  let newTitle = document.querySelector('#taskString').value
-  addNewTaskToList(todoList, newTitle)
-  renderList(todoList)
-  console.log(todoList)
+  let newTitle = document.querySelector('#taskString')
+  if (newTitle.value != "") {
+    addNewTaskToList(todoList, newTitle.value)
+    renderList(todoList)
+    newTitle.value = "";
+  }
 })
 
